@@ -1,4 +1,4 @@
-angular.module('trendingTrivia').service('dataService', function($http) {
+angular.module('triviaApp').service('dataService', function($http) {
 
     this.addTrivia = function() {
         return $http.post('https://practiceapi.devmountain.com/api/trivia/questions');
