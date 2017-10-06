@@ -28,7 +28,7 @@
     </div>
 
     <!-- Questions go here -->
-    <div ng-repeat="questions in getTrivia()"
+    <div ng-repeat="questions in allTrivia"
     {{ questions }}
 
   </article>
@@ -79,12 +79,10 @@
   </div>
 
 
-
-
-
   <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular.js" charset="utf-8"></script>
   <script src="./app.js" charset="utf-8"></script>
   <script src='./mainController.js'></script> 
+  <script src='./dataService.js'></script>
 </body>
 
 </html>
