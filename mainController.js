@@ -1,6 +1,6 @@
-angular.module('triviaApp').controller('mainController', function($scope, dataService) {
+angular.module('triviaApp').controller('mainController', function ($scope, dataService) {
 
-    dataService.getTrivia().then((response) => {
-        $scope.allTrivia = response.data;
-    }) 
+    dataService.getTrivia().then(questions => {
+        $scope.allTrivia = questions;
+    })
 })

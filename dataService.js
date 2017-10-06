@@ -13,7 +13,9 @@ angular.module('triviaApp').service('dataService', function($http) {
     }
 
     this.getTrivia = function() {
-        return $http.get('https://practiceapi.devmountain.com/api/trivia/questions/');
+        return $http.get('https://practiceapi.devmountain.com/api/trivia/questions/').then(allQuestions => {
+            return allQuestions.data;
+        })
     }
 
     this.getTriviaByDifficulty = function() {

@@ -13,7 +13,8 @@
   <header>
     <div></div>
     <h1>Trivia Trends</h1>
-    <button><span>+</span> Add Question</button>
+    <button>
+      <span>+</span> Add Question</button>
   </header>
   <article>
     <nav>
@@ -26,40 +27,42 @@
     <div class="search">
       <input type="text" placeholder="Animal to search by">
     </div>
-
-    <!-- Questions go here -->
-    <div ng-repeat="questions in getTrivia()"
-    {{ questions }}
+    
+    <div ng-repeat="questions in allTrivia">
+      {{ questions.question }}
+    </div>
 
   </article>
 
   <div class="modal">
     <form>
       <h4 class="close">X</h4>
-      <span>Question</span><input type="text" ng-model="<!-- Question -->">
-      <span>Animal it's about</span><input type="text" ng-model="<!-- Animal -->">
+      <span>Question</span>
+      <input type="text">
+      <span>Animal it's about</span>
+      <input type="text">
       <span>Difficulty</span>
       <div class="range">
-        <input type="range" min="1" max="3" ng-model="<!-- Difficulty -->">
+        <input type="range" min="1" max="3">
 
         <h5>{{newQuestion.difficulty}}</h5>
       </div>
       <h4>Options</h4>
       <div>
-        <input type="radio" ng-model="" value="1">
-        <input type="text" ng-model="">
+        <input type="radio" value="1">
+        <input type="text">
       </div>
       <div>
-        <input type="radio" ng-model="" value="2">
-        <input type="text" ng-model="">
+        <input type="radio" value="2">
+        <input type="text">
       </div>
       <div>
-        <input type="radio" ng-model="" value="3">
-        <input type="text" ng-model="">
+        <input type="radio" value="3">
+        <input type="text">
       </div>
       <div>
-        <input type="radio" ng-model="" value="4">
-        <input type="text" ng-model="">
+        <input type="radio" value="4">
+        <input type="text">
       </div>
 
       <!--Add question buttons-->
@@ -84,7 +87,8 @@
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular.js" charset="utf-8"></script>
   <script src="./app.js" charset="utf-8"></script>
-  <script src='./mainController.js'></script> 
+  <script src='./mainController.js'></script>
+  <script src='./dataService.js'></script>
 </body>
 
 </html>
